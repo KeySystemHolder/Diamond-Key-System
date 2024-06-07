@@ -250,7 +250,7 @@ end
 
 -- Whitelist and Ban HWIDs
 local whitelistHWIDs = {
-    "1A2D8B09-1116-11EE-9B2C-18A59CB860A4", 
+    "1A2D8B09-1116-11EE-9B2C-18A59CB860A5", 
     "hwid 1", 
     "hwid 2", 
     "hwid 3"
