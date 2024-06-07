@@ -250,7 +250,7 @@ end
 
 -- Whitelist and Ban HWIDs
 local whitelistHWIDs = {
-    "1A2D8B09-1116-11EE-9B2C-18A59CB860A5", 
+    "7AEDFEC0-0F22-4BAC-98F5-0A26BB90338B", 
     "hwid 1", 
     "hwid 2", 
     "hwid 3"
@@ -282,7 +282,7 @@ end
 -- Function to get HWID (for illustration purposes, use appropriate method in your environment)
 local function getHWID()
     -- Example code to get HWID. Replace with the correct method.
-    return "1A2D8B09-1116-11EE-9B2C-18A59CB860A4"
+    return "7AEDFEC0-0F22-4BAC-98F5-0A26BB90338B"
 end
 
 -- Apply Button Script
