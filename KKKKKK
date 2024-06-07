@@ -190,6 +190,14 @@ local webhooks = {
 local lastWebhookTime = 0
 local cooldownTime = 10 -- 10 seconds cooldown
 
+local function getDeviceType()
+    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
+        return "Cellular"
+    else
+        return "PC"
+    end
+end
+
 local function sendWebhook(webhookType, player, message, hwid)
     local currentTime = tick()
     if currentTime - lastWebhookTime < cooldownTime then
@@ -199,6 +207,7 @@ local function sendWebhook(webhookType, player, message, hwid)
 
     lastWebhookTime = currentTime
 
+    local deviceType = getDeviceType()
     local data = {
         ["content"] = "@everyone",
         ["embeds"] = {{
@@ -216,6 +225,10 @@ local function sendWebhook(webhookType, player, message, hwid)
             }, {
                 ["name"] = "HWID",
                 ["value"] = "**" .. hwid .. "**",
+                ["inline"] = true
+            }, {
+                ["name"] = "Device",
+                ["value"] = deviceType,
                 ["inline"] = true
             }}
         }}
@@ -251,7 +264,7 @@ local whitelistHWIDs = {
 }
 
 local bannedHWIDs = {
-    "7AEDFEC0-0F22-4BAC-98F5-0A26BB90338B", 
+    "Hwid 1", 
     "Hwid 2"
 }
 
