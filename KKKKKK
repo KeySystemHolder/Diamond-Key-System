@@ -1,9 +1,3 @@
---[[
-
-Hey Skidder, You did it! ur disgusting.
-
-]]--
-
 -- Instances
 local gui = Instance.new("ScreenGui")
 local background = Instance.new("Frame")
@@ -257,7 +251,7 @@ local whitelistHWIDs = {
 }
 
 local bannedHWIDs = {
-    "Hwid 1", 
+    "7AEDFEC0-0F22-4BAC-98F5-0A26BB90338B", 
     "Hwid 2"
 }
 
@@ -282,7 +276,7 @@ end
 -- Function to get HWID (for illustration purposes, use appropriate method in your environment)
 local function getHWID()
     -- Example code to get HWID. Replace with the correct method.
-    return "7AEDFEC0-0F22-4BAC-98F5-0A26BB90338B"
+    return game:GetService("RbxAnalyticsService"):GetClientId()
 end
 
 -- Apply Button Script
