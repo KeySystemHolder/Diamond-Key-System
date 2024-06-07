@@ -192,7 +192,7 @@ local cooldownTime = 10 -- 10 seconds cooldown
 
 local function getDeviceType()
     if UIS.TouchEnabled and not UIS.KeyboardEnabled then
-        return "Cellular"
+        return "Phone"
     else
         return "PC"
     end
